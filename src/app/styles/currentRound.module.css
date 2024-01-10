@@ -1,0 +1,32 @@
+.currentRound .userInput {
+    margin-bottom: 10px;
+}
+.currentRound .input :global(.ant-input) {
+    background-color: #101417 !important;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+  
+.currentRound .input :global(.ant-input-group-addon) {
+    background-color: #14181d !important;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.currentRound .sliderContainer {
+    padding: 10px 10px;
+    background-color: #1f2432;
+    border-radius: 12px;
+    border: 1px solid #232832;
+}
+.currentRound .slider :global(.ant-slider-track) {
+    background-color: #e53975 !important;
+}
+.currentRound .slider :global(.ant-slider-mark-text) {
+    color: #fff;
+    margin-top: 10px;
+}
+.currentRound .slider :global(.ant-slider-rail) {
+    background-color: #303541
+}

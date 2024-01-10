@@ -1,0 +1,30 @@
+.welcomePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #2f3841;
+    border-radius: 12px;
+    height: 100%;
+    padding-inline: 10px;
+}
+.headline {
+    color: #9ca5b2;
+    margin-bottom: 50px;
+}
+.description {
+    color: #676a72;
+    margin-bottom: 20px;
+}
+.input {
+    background-color: #14181d;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.disable {
+    background-color: #7a849a;
+}
+
+.disable:hover {
+    background-color: #7a849a !important;
+}

@@ -1,0 +1,26 @@
+.table :global(.ant-table-thead > tr > th) {
+    background-color: #12191d;
+    color: #9ca5b2;
+    text-align: center;
+  }
+  
+  .table :global(.ant-table-tbody > tr:nth-child(odd) > td) {
+    background-color: #222731;
+    color: white;
+    text-align: center;
+  }
+  
+  .table :global(.ant-table-tbody > tr:nth-child(even) > td) {
+    background-color: #181e27;
+    color: white;
+    text-align: center;
+  }
+  .table :global(.ant-table-tbody > tr:hover > td) {
+    background-color: grey !important;
+  }
+  .table :global(.ant-table-thead > tr > th) {
+    border-radius: 0 !important;
+  }
+  .table :global(.ant-table-thead > tr > th::before) {
+    width: 0;
+  }

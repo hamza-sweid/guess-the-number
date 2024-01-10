@@ -1,0 +1,33 @@
+.chat {
+    margin-top: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    row-gap: 10px;
+}
+.talk {
+    padding: 10px 25px 0 10px;
+    flex: 1;
+    overflow-y: scroll;
+}
+.talk::-webkit-scrollbar {
+    width: 10px;
+  }
+.talk::-webkit-scrollbar-track {
+    background: #222; 
+}
+.talk::-webkit-scrollbar-thumb {
+    background: grey; 
+  }
+.chatFooter {
+    display: flex;
+    background-color: #303841;
+    padding: 7px;
+}
+.input {
+    margin-right: 10px;
+    background-color: #14181d;
+    color: #fff;
+}

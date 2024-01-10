@@ -39,7 +39,6 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -87,12 +86,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #14181d;
 }
 
 a {
@@ -100,8 +94,71 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  color: white;
+}
+
+.primer-color {
+  color: #e53975;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.pa-1 {
+  padding: 4px;
+}
+.pa-2 {
+  padding: 8px;
+}
+
+.mx-1 {
+  margin-inline: 4px;
+}
+
+.my-1 {
+  margin-block: 4px;
+}
+.my-2 {
+  margin-block: 8px;
+}
+.my-3 {
+  margin-block: 12px;
+}
+
+.primer-bg {
+  background-color: #1e2530;
+}
+
+.primer-button {
+  background: radial-gradient(#e53975, #fb5c49);
+}
+
+.primer-button:hover {
+  background: radial-gradient(#e53929, #fb5c40) !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.ant-input {
+  border: none !important; 
+}
+
+.ant-input-group-addon {
+  border: 1px solid #33363e !important; 
+  border-radius: 8px;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
