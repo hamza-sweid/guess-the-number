@@ -9,6 +9,7 @@ import Chat from './components/chat';
 import { Col, Row } from 'antd';
 import Ranking from './components/ranking';
 import CurrentRound from './components/currentRound';
+import MyChartComponent from './components/chart';
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <Col span={15}>
           <div>
             <NavBar />
-            {/* graph */}
+            <MyChartComponent speedPoint={6} stopPoint={6} />
           </div>
         </Col>
         <Col span={13}>
