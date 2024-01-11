@@ -48,23 +48,23 @@ export default function Home() {
         </Button>
       )}
       <Row gutter={[24, 24]} className={styles.content}>
-        <Col span={8}>
+        <Col lg={8} xs={24}>
           {isGameInitialized ? (
             <CurrentRound />
           ) : (
             <Welcome emitMyName={handleShowMyName} />
           )}
         </Col>
-        <Col span={16}>
+        <Col lg={16} xs={24}>
           <div>
             <NavBar myName={myName} />
             <MyChartComponent speedPoint={stopPoint} stopPoint={stopPoint} />
           </div>
         </Col>
-        <Col span={13}>
+        <Col md={13} xs={24}>
           <Ranking />
         </Col>
-        <Col span={11}>
+        <Col md={11} xs={24}>
           <Chat />
         </Col>
       </Row>
