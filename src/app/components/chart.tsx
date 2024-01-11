@@ -1,10 +1,35 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Chart from 'chart.js/auto';
+import style from '../styles/chart.module.css';
+import { useSelector } from 'react-redux';
 
-const MyChartComponent = ({ speedPoint, stopPoint }) => {
-  const chartRef = useRef(null);
+const MyChartComponent = ({
+  speedPoint,
+  stopPoint,
+}: {
+  speedPoint: number;
+  stopPoint: number;
+}) => {
+  const chartRef = useRef<HTMLCanvasElement>(null);
+  const [animatedStopPoint, setAnimatedStopPoint] = useState(0); // State for animating stopPoint
+  const roundDuration = useSelector((state: any) => state.app?.roundDuration);
 
   useEffect(() => {
+    const startTime = Date.now();
+
+    const animateStopPoint = () => {
+      const elapsedTime = Date.now() - startTime;
+      const progress = Math.min(elapsedTime / roundDuration, 1); // Ensure progress does not exceed 1
+      const currentStopPoint = progress * stopPoint;
+
+      setAnimatedStopPoint(currentStopPoint);
+
+      if (elapsedTime < roundDuration) {
+        requestAnimationFrame(animateStopPoint); // Continue animation
+      }
+    };
+
+    requestAnimationFrame(animateStopPoint);
     if (chartRef.current) {
       const ctx = chartRef.current.getContext('2d');
       if (ctx) {
@@ -60,7 +85,7 @@ const MyChartComponent = ({ speedPoint, stopPoint }) => {
           },
           options: {
             animation: {
-              duration: 2000,
+              duration: roundDuration,
               easing: 'easeOutCubic',
             },
             scales: {
@@ -71,12 +96,24 @@ const MyChartComponent = ({ speedPoint, stopPoint }) => {
               },
               x: {
                 type: 'linear',
+                beginAtZero: true,
+                max: 10, // Fixed max value for x-axis
+                ticks: {
+                  color: '#eee', // Set x-axis label colors to white
+                },
+                grid: {
+                  // color: 'white', // Set x-axis gridline (above the numbers) colors to white
+                },
+                border: {
+                  color: '#eee', // Set x-axis border color to white
+                },
               },
             },
             elements: {
               point: {
                 pointStyle: 'circle',
-                radius: (context) => (context.raw.x === stopPoint ? 10 : 0), // Enlarge the point at stopPoint
+                radius: (context: any) =>
+                  context.raw.x === stopPoint ? 10 : 0, // Enlarge the point at stopPoint
               },
             },
             plugins: {
@@ -95,7 +132,12 @@ const MyChartComponent = ({ speedPoint, stopPoint }) => {
     }
   }, [speedPoint, stopPoint]);
 
-  return <canvas ref={chartRef} />;
+  return (
+    <div className={style.chart}>
+      <span className={style.stopPoint}>{animatedStopPoint.toFixed(2)}x</span>
+      <canvas ref={chartRef} />
+    </div>
+  );
 };
 
 export default MyChartComponent;

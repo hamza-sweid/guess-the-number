@@ -2,18 +2,25 @@
     background-color: #12191d;
     color: #9ca5b2;
     text-align: center;
+    padding: 5px !important;
   }
   
   .table :global(.ant-table-tbody > tr:nth-child(odd) > td) {
     background-color: #222731;
     color: white;
     text-align: center;
+    font-size: 13px !important;
+    color: #eee;
+    padding: 10px !important
   }
   
   .table :global(.ant-table-tbody > tr:nth-child(even) > td) {
     background-color: #181e27;
     color: white;
     text-align: center;
+    font-size: 13px !important;
+    color: #eee;
+    padding: 10px !important
   }
   .table :global(.ant-table-tbody > tr:hover > td) {
     background-color: grey !important;
@@ -23,4 +30,13 @@
   }
   .table :global(.ant-table-thead > tr > th::before) {
     width: 0;
+  }
+  .table :global(tr > td .win) {
+    color: #00ff00;
+    font-weight: 600;
+  }
+
+  .table :global(tr > td .lost) {
+    color: #ff0000 !important;
+    font-weight: 600;
   }

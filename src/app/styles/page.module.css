@@ -13,3 +13,9 @@
 .main-border {
   border: 1px solid #2f3841;
 }
+
+.resetBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

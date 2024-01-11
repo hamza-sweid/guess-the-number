@@ -1,8 +1,13 @@
 import { Button, Input } from 'antd';
 import style from '../styles/chat.module.css';
 import { WechatFilled } from '@ant-design/icons';
+import { useSelector } from 'react-redux';
 
 const Chat = () => {
+  const isGameInitialized = useSelector(
+    (state: any) => state.app?.isGameInitialized
+  );
+
   return (
     <>
       <h3>
@@ -48,10 +53,16 @@ const Chat = () => {
           </p>
         </div>
         <div className={style.chatFooter}>
-          <Input className={style.input} />
-          <Button className="primer-button" type="primary">
-            Start
-          </Button>
+          <Input
+            readOnly={!isGameInitialized}
+            placeholder="Type you message"
+            className={style.input}
+          />
+          {isGameInitialized && (
+            <Button className="primer-button" type="primary">
+              Start
+            </Button>
+          )}
         </div>
       </div>
     </>
