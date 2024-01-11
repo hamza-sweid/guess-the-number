@@ -106,14 +106,13 @@ const CurrentRound = () => {
 
   const handleStartTheRound = () => {
     if (myData.totalPoint < point) return message.warning('Not enough points');
-    if (point < 25)
-      return message.warning(
-        'Points must be greater than 25 to start the round'
-      );
+    if (point < 1)
+      return message.warning('Point must be greater than 1 to start the round');
     if (multiplier < 1)
       return message.warning(
         'Multiplier must be greater than 1 to start the round'
       );
+    if (multiplier > 9.99) return message.warning('Multiplier must be less 10');
     const players: PlayersInterface[] = updatedPlayers(point, multiplier);
     setLocalPlayers(players);
     const randomStopPoint = Number((Math.random() * 10).toFixed(2));

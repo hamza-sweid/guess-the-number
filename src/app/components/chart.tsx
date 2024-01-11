@@ -11,7 +11,7 @@ const MyChartComponent = ({
   stopPoint: number;
 }) => {
   const chartRef = useRef<HTMLCanvasElement>(null);
-  const [animatedStopPoint, setAnimatedStopPoint] = useState(0); // State for animating stopPoint
+  const [animatedStopPoint, setAnimatedStopPoint] = useState(0);
   const roundDuration = useSelector((state: any) => state.app?.roundDuration);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const MyChartComponent = ({
     if (chartRef.current) {
       const ctx = chartRef.current.getContext('2d');
       if (ctx) {
-        const maxYValue = 10; // The y-axis should go up to 10
+        const maxYValue = 10;
         const dataPoints = [];
         for (let x = 0; x <= 10; x += 0.1) {
           let y;

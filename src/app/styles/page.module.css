@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   min-height: 100vh;
 }
 .content {
-  width: 100%;
+  width: 80%;
 }
 
 .main-border {

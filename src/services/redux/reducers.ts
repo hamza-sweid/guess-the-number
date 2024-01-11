@@ -40,7 +40,11 @@ export const appSlice = createSlice({
             : totalPoint + Number(player.point) * Number(player.multiplier);
         return { ...player, score, totalPoint };
       });
-      state.ranking = updatedRanking.sort((a, b) => b.score - a.score);
+      let updatedPlayers = updatedRanking.sort((a, b) => b.score - a.score);
+      updatedPlayers = updatedPlayers.map((player: PlayersInterface, index) => {
+        return { ...player, key: String(index + 1) };
+      });
+      state.ranking = updatedPlayers;
     },
     setIsRoundRunning: (state, action: PayloadAction<boolean>) => {
       state.isRoundRunning = action.payload;

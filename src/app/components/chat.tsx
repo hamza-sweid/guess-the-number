@@ -28,7 +28,6 @@ const Chat = () => {
     const mockWs = new WebSocket('ws://localhost:3000');
     mockWs.onopen = () => console.log('Connected to mock server');
     mockWs.onmessage = (event: MessageEvent) => {
-      console.log('Message received:', event.data);
       setMessages((prevMessages) => [...prevMessages, event.data]);
     };
     setWs(mockWs);
@@ -41,7 +40,6 @@ const Chat = () => {
 
   const sendMessage = (): void => {
     if (ws && input.trim()) {
-      console.log('Sending message:', input);
       ws.send(input);
       setInput('');
     }
