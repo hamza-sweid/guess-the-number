@@ -18,8 +18,7 @@ pnpm dev
 
 <h2>Features</h2>
 
-<b>User Registration:</b> Start by entering your name to join the game.
-
+<b>User Registration:</b> Start by entering your name to join the game.<br />
 <b>Game Dashboard:</b> Includes the current round, a live graph, a ranking table, and a chat area.
 <b>Point System:</b> Start with 1000 points and use them to make predictions.
 <b>Speed Slider:</b> A slider to adjust the multiplier's rising speed.
