@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Guess The Number</h1>
 
 ## Getting Started
 
@@ -12,27 +12,35 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>Introduction</h2>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+"Guess the Number" is a unique game where players start with 1000 points and aim to predict a multiplier value as it increases. The game is entirely front-end based, featuring a mock server for real-time chatting and dynamic updates after each round.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<h2>Features</h2>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<b>User Registration:</b> Start by entering your name to join the game.
+<b>Game Dashboard:</b> Includes the current round, a live graph, a ranking table, and a chat area.
+<b>Point System:</b> Start with 1000 points and use them to make predictions.
+<b>Speed Slider:</b> A slider to adjust the multiplier's rising speed.
+<b>Competitive Play:</b> Play against 3 other players, each with their own points and predictions.
+<b>Color-Coded Results:</b> Visual indicators to show winners and losers each round.
+<b>Ranking Updates:</b> Rankings update after each round based on scores.
+<b>Endgame:</b> The game ends when a player loses all their points.
+<b>Mock WebSocket Server:</b> Enables real-time chat without a backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<h2>How to Play</h2
 
-## Learn More
+<b>Start the Game:</b> Enter your name to initiate.
+<b>Place Your Bets:</b> Use your points to make predictions.
+<b>Adjust the Speed:</b> Use the speed slider as needed.
+<b>Start Round:</b> Begin the game and watch the multiplier rise.
+<b>Check Your Ranking:</b> View your current rank in the ranking table to see how you're performing against other players.
+<b>Chat and Interact:</b> Use the chat feature to communicate with other players.
+<b>End of Round:</b> Check the color codes to see if you've won or lost points.
+<b>Game Over:</b> The game concludes when you run out of points.
 
-To learn more about Next.js, take a look at the following resources:
+<h2>Technical Aspects</h2
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Front-end only implementation.
+Utilizes a mock WebSocket server for the chat feature.
+Built with modern JavaScript frameworks and libraries.
