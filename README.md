@@ -16,6 +16,17 @@ pnpm dev
 
 "Guess the Number" is a unique game where players start with 1000 points and aim to predict a multiplier value as it increases. The game is entirely front-end based, featuring a mock server for real-time chatting and dynamic updates after each round.
 
+<h2>Technologies Used</h2>
+"Guess the Number" is built using a modern tech stack to provide a seamless and interactive gaming experience:
+
+<b>TypeScript:</b> Enhances code quality and readability with static typing.<br />
+<b>React.js & Next.js:</b> Powers the frontend, offering a responsive and dynamic user interface.<br />
+<b>Ant Design (AntD):</b> Used for UI design, providing a sleek and modern look.<br />
+<b>WebSocket (Mocked):</b> Simulates real-time chat functionality in the frontend environment.<br />
+<b>Redux Toolkit:</b> Manages the application state efficiently and predictably.<br />
+<b>Chart.js:</b> Visualizes game data, such as player scores, through interactive charts.<br />
+This combination of technologies ensures a robust and scalable application, delivering an engaging gaming experience to users.
+
 <h2>Features</h2>
 
 <b>User Registration:</b> Start by entering your name to join the game.
