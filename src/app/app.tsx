@@ -8,13 +8,12 @@ import Ranking from './components/ranking';
 import CurrentRound from './components/currentRound';
 import MyChartComponent from './components/chart';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { resetStore } from '../services/redux/reducers';
 import { PlayersInterface } from './interfaces/app';
 
 export default function Home() {
   const dispatch = useDispatch();
-  const [round, setRound] = useState<number>(1);
   const [myName, setMyName] = useState<string>('');
   const isGameInitialized = useSelector(
     (state: any) => state.app?.isGameInitialized
