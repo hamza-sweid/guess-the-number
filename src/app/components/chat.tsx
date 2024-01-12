@@ -1,9 +1,9 @@
-import { Button, Input } from 'antd';
-import style from '../styles/chat.module.css';
 import { WechatFilled } from '@ant-design/icons';
-import { useSelector } from 'react-redux';
+import { Button, Form, Input } from 'antd';
+import { Server, WebSocket } from 'mock-socket';
 import { useEffect, useState } from 'react';
-import { WebSocket, Server } from 'mock-socket';
+import { useSelector } from 'react-redux';
+import style from '../styles/chat.module.css';
 
 const Chat = () => {
   const [messages, setMessages] = useState<string[]>([]);
@@ -59,7 +59,7 @@ const Chat = () => {
             </p>
           ))}
         </div>
-        <div className={style.chatFooter}>
+        <Form onFinish={sendMessage} className={style.chatFooter}>
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -75,8 +75,8 @@ const Chat = () => {
             >
               Start
             </Button>
-          )}
-        </div>
+            )}
+        </Form>
       </div>
     </>
   );
